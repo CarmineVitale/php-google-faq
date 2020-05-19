@@ -36,11 +36,26 @@ header a {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
+    
 }
+
 .header-menu-left ul li {
     list-style: none;
     display: inline-block;
     margin-right: 18px;
+    position: relative;
+}
+.header-menu-left ul li.active a::after {
+    content: '';
+    position: absolute;
+    width: 95%;
+    height: 3px;
+    top: 200%;
+    right: 3%;
+    background: blue;
+}
+.header-menu-left ul li.active a {
+    color: blue;
 }
 /* main */
 main {
@@ -50,6 +65,9 @@ main {
     color: #3C4042;
     margin-bottom: 30px;
     margin-top: 40px;
+}
+.answer {
+    line-height: 24px;
 }
 /* Footer */
 footer {
