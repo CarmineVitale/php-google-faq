@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Faq</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'/>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -42,12 +44,57 @@ $faqs = [
         'answer' => "In alcuni casi sì. Quando fai clic su un risultato della Ricerca Google, il tuo browser web potrebbe reindirizzare alla pagina web di destinazione anche l'indirizzo Internet, o URL, della pagina dei risultati di ricerca sotto forma di URL referrer. Talvolta, l'URL della pagina dei risultati di ricerca potrebbe contenere la query di ricerca che hai inserito. Se utilizzi la ricerca SSL (la funzione di ricerca criptata di Google), nella maggior parte dei casi i termini di ricerca non vengono inviati come parte dell'URL negli URL referrer. Questo comportamento può fare eccezione, ad esempio se utilizzi alcuni browser meno diffusi. Ulteriori informazioni sulla ricerca SSL sono disponibili qui. Le query di ricerca o le informazioni contenute nell'URL referrer potrebbero essere disponibili mediante Google Analytics o un'API (Application Programming Interface). Inoltre, gli inserzionisti potrebbero ricevere informazioni relative all' esatte parole chiave che hanno determinato il clic su un annuncio.",
     ],
 ];
-
-foreach ($faqs as $faq) { ?>
-    <div> <h2 class="question"> <?php echo $faq['question'];  ?>  </h2> </div>
-    <div> <p class="answer"><?php echo $faq['answer']; ?></p> </div>
-<?php }
 ?>
+
+
+<header>
+    <div class="logo">
+            <img src="img/google_logo.png" alt="">
+            <h1>Privacy e termini</h1>
+    </div>
+
+    <div class="header-menu">
+        <div class="header-menu-left">
+            <ul>
+                <li> <a href="#">Introduzione<a> </li>
+                <li> <a href="#">Norme sulla privacy<a> </li>
+                <li> <a href="#">Termini di servizio<a> </li>
+                <li> <a href="#">Tecnologie<a> </li>
+                <li class="active"> <a href="#">Domande frequenti<a> </li>
+            </ul>
+        </div>
+        <div class="header-menu-right">
+            <span>Account Google</span>
+        </div>
+    </div>
+</header>
+<main>
+<?php   foreach ($faqs as $faq) { ?>
+            <div> <h2 class="question"> <?php echo $faq['question'];  ?>  </h2> </div>
+            <div> <p class="answer"><?php echo $faq['answer']; ?></p> </div>
+<?php   }
+?>
+</main>
+<footer>
+    <div class="footer-menu">
+        <div class="footer-menu-left">
+            <ul>
+                <li>Google</li>
+                <li>Tutto su Google</li>
+                <li>Privacy</li>
+                <li>Termini</li>
+            </ul>
+        </div>
+        <div class="footer-menu-right">
+            <label for="language"><i class="fas fa-language"></i></label>
+           <select id="language">
+               <option value="italiano">Italiano</option>
+               <option value="italiano">Inglese</option>
+               <option value="italiano">Francese</option>
+           </select> 
+        </div>
+    </div>
+</footer>
     
 </body>
 </html>
